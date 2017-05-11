@@ -1,0 +1,166 @@
+<html>
+<head>
+  <title>Java Script is awesome</title>
+  <!-- Link to external js -->
+  <script language="javascript" src="more_javascript.js"></script>
+</head>
+<body>
+  <script>
+  <!--
+  document.write("This is the very first line.")
+  //Escape Sequence
+  var str_escape= "<br/>Escape sequence trial \" \' \\ \n \t";
+  document.write(str_escape);
+
+  document.write("<br/>");
+  //String Operations
+  var combine_first = "first string";
+  var combine_second = " second string";
+  var combined = combine_first + combine_second;
+  document.write("<br/>First String: " + combine_first);
+  document.write("<br/>Second String: " + combine_second);
+  document.write("<br/>Combined String: " + combined);
+  document.write("<br/>Length of Combined String: " + combined.length);
+  document.write("<br/>Substring Combined String 10-20: " + combined.substring(10,20));
+  document.write("<br/>Specific character of Combined String at 3: " + combined.charAt(3));
+  document.write("<br/>Specific character of Combined String at last: " + combined.charAt(combined.length-1));
+  document.write("<br/>Index of R in Combined String : " + combined.indexOf("r"));
+
+  document.write("<br/>");
+  //Variables & Operations
+  document.write("<br/>Number and String");
+  var num = 5;
+  var str = "10";
+  document.write("<br/>num=5 & str=\"10\" ");
+  document.write("<br/>num + str : " + (num + str));
+  document.write("<br/>num * str : " + (num * str));
+  document.write("<br/>num / str : " + (num / str));
+  document.write("<br/>num - str : " + (num - str));
+  document.write("<br/>str % num : " + (str % num));
+  document.write("<br/>Number Function");
+  document.write("<br/>num + Number(str) : " + (num + Number(str)));
+  document.write("<br/>String Function");
+  document.write("<br/>String(3) + String(4) : " + (String(3) + String(4)));
+
+  document.write("<br/>");
+  document.write("<br/>Float");
+  var flt = 3.1415926535;
+  document.write("<br/>flt = " + flt );
+  document.write("<br/>flt.toFixed(3) = " + flt.toFixed(3) );
+  document.write("<br/>parseInt(flt) = " + parseInt(flt));
+  document.write("<br/>typeof(flt) = " + typeof(flt));
+
+  document.write("<br/>");
+  document.write("<br/>Boolean ");
+  var bool = true;
+  document.write("<br/>bool = " + bool );
+  document.write("<br/>!bool = " + (!bool));
+  document.write("<br/>Boolean(0) = " + Boolean(0));
+  document.write("<br/>Boolean(1) = " + Boolean(1));
+  document.write("<br/>Boolean(-1) = " + Boolean(-1));
+  document.write("<br/>Boolean(-10) = " + Boolean(-10));
+  document.write("<br/>Boolean(10) = " + Boolean(10));
+  document.write("<br/>Boolean(NaN) = " + Boolean(NaN));
+  document.write("<br/>");
+  document.write("<br/>4 >  7 = " + (4 > 7));
+  document.write("<br/>4 >= 7 = " + (4 >= 7));
+  document.write("<br/>4 <  7 = " + (4 < 7));
+  document.write("<br/>4 <= 7 = " + (4 <= 7));
+  document.write("<br/>4 == 7 = " + (4 == 7));
+  document.write("<br/>4 != 7 = " + (4 != 7));
+  //document.write("<br/>4 = 7 = " + (4 = 7));
+  document.write("<br/>");
+  document.write("<br/>Logical  operators");
+  document.write("<br/> && :: (5>3) && (4<1) :" + ((5>3) && (4<1)) );
+  document.write("<br/> || :: (5>3) || (4<1) :" + ((5>3) || (4<1)) );
+  document.write("<br/> !  :: !(5>3) :" + (!(5>3)));
+
+  document.write("<br/>");
+  document.write("<br/>Array");
+  var arr = new Array("car", "truck", "jeep", 5);
+  document.write("<br/>arr : "+ arr);
+  document.write("<br/>arr[1] : "+ arr[1]);
+  document.write("<br/>arr[3] + 5 : "+ (arr[3] +5));
+  document.write("<br/>for loop arr");
+  for (elePos in arr){
+    document.write("<br/> elePos arr[elePos] :" + elePos + " " + arr[elePos]);
+  }
+  document.write("<br/>");
+  document.write("<br/>Conditional Operator");
+  document.write("<br/>var condition=(8<5)?\"8 is less\":\"5 is less\"")
+  var condition=(8<5)?"8 is less":"5 is less";
+  document.write("<br/>condition = " + condition);
+
+  document.write("<br/>");
+  document.write("<br/>if condition");
+  if(3 > 2)
+  {
+    document.write("<br/>3 is greater");
+  }else if(10 == 12)
+  {
+    document.write("<br/>10 == 12");
+  }else
+  {
+    document.write("<br/>else is correct");
+  }
+
+  document.write("<br/>");
+  document.write("<br/>switch condition");
+  var player_name = "messi";
+  switch(player_name)
+  {
+    case "ronaldo":
+        document.write("<br/> Hello");
+        document.write("<br/> ronaldo is matched");
+        break;
+   case "messi":
+        document.write("<br/> Magical");
+        document.write("<br/> messi is matched");
+        break;
+   default:
+        document.write("<br/> Crap!");
+        document.write("<br/> None is matched");
+        break;
+  }
+
+  document.write("<br/>");
+  document.write("<br/>Looping");
+  document.write("<br/>While var max=10; ");
+  var max = 10;
+  var i = 0;
+  while (i < max)
+  {
+    document.write("<br/> i : "+ i +" max : " + max);
+    i++;
+    if(i%2 == 0)
+    {
+      continue;
+    }
+    document.write("<br/> This is  not continue");
+
+  }
+
+  document.write("<br/>");
+  document.write("<br/>do while condition Looping");
+  var count = 0;
+  do{
+    document.write("<br/>Doing count : " + count );
+    count++;
+  }while(count < 5);
+
+  document.write("<br/>");
+  document.write("<br/>for Looping");
+  for(var j = 0; j <= 5; j++){
+    document.write("<br/>inside for loop j : " + j);
+  }
+
+  document.write("<br/>");
+  document.write("<br/>Calling external function");
+  var sum = add(6, 8);
+  document.write("<br/> Sum : " + sum);
+
+  -->
+  </script>
+
+</body>
+</html>
